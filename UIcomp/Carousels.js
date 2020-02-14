@@ -29,7 +29,7 @@ export class TopPicksCarousel extends Component {
             <View style={{margin: 15, flexDirection: 'column'}}>
               <Image
                 style={{borderRadius: 20, height: 100, width: 190}}
-                source={{uri: item.imgURL}}
+                source={require('../images/dd.jpg')}
               />
               <EText h4>{item.name}</EText>
               <EText style={{fontSize: 15}}>
@@ -61,7 +61,7 @@ export default class PopularRestCarousel extends Component {
             <View style={{margin: 15, flexDirection: 'column', width: 260}}>
               <Image
                 style={{borderRadius: 20, height: 150, width: 250}}
-                source={{uri: item.imgURL}}
+                source={require('../images/dd.jpg')}
               />
               <EText h4>{item.name}</EText>
               <View style={{flexDirection: 'row'}}>
@@ -104,7 +104,7 @@ export class OffersCarousel extends Component {
           renderItem={({item}) => (
             <Image
               style={{borderRadius: 20, margin: 10, height: 230, width: 260}}
-              source={{uri: item}}
+              source={require('../images/dd.jpg')}
             />
           )}
         />
@@ -138,7 +138,7 @@ export class QuickSuggestionsCarousel extends Component {
               }}>
               <Image
                 style={{borderRadius: 20, margin: 10, height: 230, width: 260}}
-                source={{uri: item.imgURL}}
+                source={require('../images/dd.jpg')}
               />
               <EText h4 style={{textAlign: 'center', marginTop: 1}}>
                 {item.name}
@@ -188,9 +188,7 @@ export class CuisineSelectCarousel extends Component {
               <Avatar
                 rounded
                 size="xlarge"
-                source={{
-                  uri: item.imgURL,
-                }}
+                source={require('../images/dd.jpg')}
               />
 
               <EText h4 style={{textAlign: 'center', marginTop: 1}}>
@@ -240,7 +238,7 @@ export class QuickOrderCarousel extends Component {
                   flex: 2,
                   alignItems: 'flex-start',
                 }}
-                source={{uri: item.imgURL}}
+                source={require('../images/dd.jpg')}
               />
 
               <EText style={{fontSize: 18}}>{item.name}</EText>
@@ -315,7 +313,7 @@ export class AllRestaurantsCarousel extends Component {
                 <Image
                   onPress={() => this.props.navigation.navigate('Main')}
                   style={{height: 100, width: 100, alignItems: 'flex-start'}}
-                  source={{uri: item.imgURL}}
+                  source={require('../images/dd.jpg')}
                 />
 
                 <View

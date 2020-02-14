@@ -172,10 +172,24 @@ export default class HotelDetailsScreen extends Component {
       alignItems: 'center',
       height: 100,
     },
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+    },
+    horizontal: {
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      padding: 10,
+    },
   });
   render() {
     if (!this.state.isReady) {
-      return <ActivityIndicator />;
+      return (
+        <ActivityIndicator
+          size="large"
+          style={[this.styles.container, this.styles.horizontal]}
+        />
+      );
     }
     return (
       <View>
@@ -266,10 +280,7 @@ export default class HotelDetailsScreen extends Component {
             </View>
             <Image
               style={{height: 50, width: 50, alignContent: 'flex-end'}}
-              source={{
-                uri:
-                  'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_400,h_400/HygieneGoodWhite_kviidn',
-              }}
+              source={require('../images/dd.jpg')}
             />
           </View>
           <Divider
@@ -302,7 +313,7 @@ export default class HotelDetailsScreen extends Component {
                       flex: 2,
                       alignItems: 'flex-start',
                     }}
-                    source={{uri: item.imgURL}}
+                    source={require('../images/dd.jpg')}
                   />
 
                   <EText style={{fontSize: 18}}>{item.name}</EText>
@@ -369,7 +380,7 @@ export default class HotelDetailsScreen extends Component {
                   <View style={{flexDirection: 'row'}}>
                     <Image
                       style={{height: 50, width: 50, alignItems: 'flex-start'}}
-                      source={{uri: item.imgURL}}
+                      source={require('../images/dd.jpg')}
                     />
 
                     <View
@@ -431,7 +442,7 @@ export default class HotelDetailsScreen extends Component {
                           width: 50,
                           alignItems: 'flex-start',
                         }}
-                        source={{uri: item.imgURL}}
+                        source={require('../images/dd.jpg')}
                       />
 
                       <View
@@ -481,7 +492,7 @@ export default class HotelDetailsScreen extends Component {
                           width: 50,
                           alignItems: 'flex-start',
                         }}
-                        source={{uri: item.imgURL}}
+                        source={require('../images/dd.jpg')}
                       />
 
                       <View
@@ -531,7 +542,7 @@ export default class HotelDetailsScreen extends Component {
                           width: 50,
                           alignItems: 'flex-start',
                         }}
-                        source={{uri: item.imgURL}}
+                        source={require('../images/dd.jpg')}
                       />
 
                       <View
